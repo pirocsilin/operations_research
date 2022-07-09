@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="do.sibsutis.ru">
+
+  <title>ТЕМА 6. Конспект лекций</title>
+	
+	<link rel="icon" type="image/png" href="../lib/css/favicon.png">
+  <!-- Bootstrap Core CSS -->
+  <link href="../lib/css/bootstrap.css" rel="stylesheet">
+	
+  <!-- Custom CSS -->
+  <link href="../lib/css/scrolling-nav.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+ <div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+   <li class="hidden"> <a class="page-scroll" href="#page-top"></a> </li>
+	 
+	 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+   </button>
+	 
+   <a class="navbar-brand " href="../index.htm"> 
+  <text class = "hidden-xs">Исследование операций</text> 
+  <text class = "visible-xs">ИО</text>
+	 </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and glyphicon glyphicon-list-alt content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+   
+	 <!-- <ul class="nav navbar-nav">
+		<li><a href="#"></a></li> 
+   </ul> -->
+	
+   <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+		<button type="button" class="navbar-toggle dropdown-toggle hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>	   
+		<a class = "dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Материалы</a>
+     <ul class="dropdown-menu">
+<li><a href="../index.htm">Аннотация курса</a></li>
+
+      <li role="separator" class="divider"></li>
+    
+      <li><a href="lec_index.htm">Теория</a></li>
+   
+   <li><a href="c_work.htm">Контрольная работа</a></li>
+ 
+      <li><a href="gloss.htm">Глоссарий</a></li>
+    <li role="separator" class="divider"></li>
+  
+    
+    <li><a href="lit.htm">Литература</a></li>
+ 
+      <!--li><a href="q.htm">Вопросы для самопроверки</a></li-->			
+     </ul>
+ </li>
+ </ul>
+  </div><!-- /.navbar-collapse -->
+ </div><!-- /.container-fluid -->
+</nav>
+
+
+  <div id="intro" class="section content-section ">
+    <div class="container">
+       <div class="row">
+        <div class="col-lg-12">	
+
+
+<!-- содержание -->	
+<div class="page-header">				
+<h3><a href="#">Тема 6. Решение матричных игр</a></h3>
+<a href="#1" class=punkt>6.1. Решение матричных игр в чистых стратегиях</a><br>
+<a href="#2" class=punkt>6.2. Смешанные стратегии</a><br>
+<a href="#3" class=punkt>6.3. Доминирование стратегий</a><br>
+<a href="#4" class=punkt>6.4. Решение матричной игры путем ее сведения к задаче линейного программирования</a><br>
+<a href="#q" class=punkt>Контрольные вопросы</a><br>
+</div>
+<!--начало-->
+<a name=1 class="anchor"></a><h3>6.1. Решение матричных игр в чистых стратегиях</h3>
+<p>Будем рассматривать игру, задаваемую платежной матрицей: </p>
+<table Table border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p></p>
+ </td>
+ <td width=63>
+ <p align=center><i>В</i><sub>1</sub></p>
+ </td>
+ <td width=66 valign=bottom style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>В</i><sub>2</sub></p>
+ </td>
+ <td width=76 valign=bottom >
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>В</i><i><sub>n</sub></i></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>1</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>11</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>12</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>1<i>n</i></sub></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>2</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>21</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>22</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>2<i>n</i></sub></p>
+ </td>
+ </tr>
+<tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'>...</p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'>...</p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>...</p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>...</p>
+ </td>
+ </tr> 
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>m</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>m1</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>m2</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>m<i>n</i></sub></p>
+ </td>
+ </tr>
+ </table>
+ <p>Каждый из игроков стремится максимизировать свой выигрыш с учетом поведения противника. Поэтому игроку А, принимая решение о выборе своей стратегии (строки), необходимо учитывать возможность наиболее неблагоприятного развития событий. </p>
+
+<h4><b> Максиминная стратегия, принцип максимина</b></h4>
+<p>Вполне разумным представляется его желание действовать таким образом, чтобы получить максимальный гарантированный выигрыш независимо от ответа игрока В. </p>
+<p>Пусть игрок А выбрал некоторую чистую стратегию. Посмотрим, какой выигрыш он может себе обеспечить при любом поведении противника. </p>
+<p>Если игрок В выбирает i-ю строку, то его выигрышем в зависимости от ответа противника может быть любое из чисел в этой строке, т.е. он гарантирует себе выигрыш <img width=101 height=37
+src="img/lec6.files/image001.png">. Так как он стремится максимизировать свой выигрыш, то ясно, что ему следует выбирать свою строку так, чтобы его минимальный выигрыш был максимальным, т.е. равен </p>
+<br>
+<p><img src="img/lec6.files/image002.png" width=102 height=40 align="middle"> = <img
+src="img/lec6.files/image003.png" width=98 height=37 align="baseline"> <b>(6.1)</b></p>
+<br>
+<p>Таким образом, α ≥ α<sub>i</sub> для всех <img width=88 height=35
+src="img/lec6.files/image004.png"> Стратегия <img width=52 height=47 src="img/lec6.files/image005.png"> соответствующая выбору строки <img width=20
+height=33 src="img/lec6.files/image006.png"> матрицы <i>А</i>, минимальное значение в которой равно α, называется максиминной чистой стратегией, а величина α, вычисляемая по формуле (6.1), называется нижней ценой игры или максимином. </p>
+<p>Выбирая эту стратегию <img width=38 height=35
+src="img/lec6.files/image007.png"> игрок А действует очень осторожно, стремясь обеспечить себе гарантированный выигрыш, равный максимину α. Поэтому принцип рационального поведения, которому он следует, называется принципом максимина. Этот принцип гласит: нужно выбрать такую стратегию, чтобы при наихудшем поведении противника получить максимальный выигрыш. Он был впервые сформулирован Дж. фон Нейманом и имеет важное значение в теории игр.</p>
+<h4><b>Минимаксная стратегия</b></h4>
+<p>Аналогично игрок В  может определить стратегию, обеспечивающую ему минимальный проигрыш при любом ответе игрока А. 
+Для этого ему нужно найти в каждом столбце максимальное значение, равное его проигрышу при наиболее неблагоприятном для него ответе противника, т.е. величину <img src="img/lec6.files/image008.png"> для всех <img src="img/lec6.files/image009.png">. Тогда величина </p>
+<p> <img width=223 height=39 src="img/lec6.files/image010.png"> <b>(6.2)</b></p>
+<p>будет минимальным проигрышем игрока В, который он обеспечивает себе при любом ходе игрока А. Ясно, что β ≤ β<sub>j</sub>  для всех <img src="img/lec6.files/image011.png">.</p>
+<p>Величина β, вычисляемая по формуле (6.2), называется верхней ценой игры или минимаксом. Стратегия <img src="img/lec6.files/image012.png">, соответствующая выбору столбца <img src="img/lec6.files/image013.png"> матрицы А, максимальное значение в котором равно β, называется минимаксной чистой стратегией. Выбрав минимаксную чистую стратегию, игрок В проиграет не больше верхней цены игры. </p>
+<p>Отметим, что во всех матричных играх </p>
+<p>α ≤ β,</p>
+<p>т.е. нижняя цена матричной игры всегда не превосходит ее верхней цены. </p>
+ <p></p>
+<p>Пример 6.1.  Дана матрица игры, в которой у игрока А три стратегии, у игрока В четыре стратегии:</p>
+ 
+<table Table border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>1</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>2</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>3</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>4</sub></p>
+ </td>
+  </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>A<sub>1</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>17</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>16</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>15</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>12</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>A<sub>2</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>11</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>18</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>12</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>13</p>
+ </td>
+
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>A<sub>3</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>18</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>11</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>13</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>12</p>
+ </td>
+ </tr>
+ </table>
+
+
+<p>Выпишем для игроков значения α<sub>i</sub>   и  β<sub>j</sub>  </p>
+
+<table Table border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>1</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>2</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>3</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>4</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>α<sub>i</sub></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>A<sub>1</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>17</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>16</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>15</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>12</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>12</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>A<sub>2</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>11</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>18</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>12</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>13</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>11</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>A<sub>3</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>18</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>11</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>13</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>12</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>11</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>β<sub>j</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>18</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>18</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>15</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>13</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center></p>
+ </td>
+ </tr>
+ </table>
+
+ 
+<p> Таким образом, нижняя цена игры равна: </p>
+<p><img width=97
+height=38 src="img/lec6.files/image014.png"> =12, </p>
+<p>при этом максиминной стратегией является стратегия А<sub>1</sub>.</p>
+<p> Верхняя цена игры:</p>
+<p> <img width=144 height=44 src="img/lec6.files/image015.png">,</p>
+<p> минимаксная стратегия второго  игрока В<sub>4</sub>.</p>
+<p>Рассмотрим случай, когда максимин <i>α</i> равен минимаксу <i>β</i>. Обозначим их общее значение <img src="img/lec6.files/image058n.png">, т.е. </p>
+<p><img src="img/lec6.files/image058n.png"> = <img width=102 height=42 src="img/lec6.files/image016.png"> <img src="img/lec6.files/image017.png">.</p>
+<p>Число <img src="img/lec6.files/image058n.png"> называется ценой игры. В этом случае максиминная стратегия игрока А и минимаксная стратегия игрока В образуют так называемую седловую точку. </p>
+<p>Пусть А — платежная матрица размерности m <i>x</i> n. Элемент  называется седловой точкой матрицы А, если для всех  выполнены следующие неравенства:</p>
+<p><img width=151 height=37 src="img/lec6.files/image020.png">, <b>(6.3)</b></p>
+<p>то есть элемент <img src="img/lec6.files/image021.png"> одновременно является наименьшим в своей строке <img src="img/lec6.files/image022.png">  и наибольшим в своем столбце <img src="img/lec6.files/image023.png">. Справедлива следующая теорема.</p>
+<p>Теорема 6.1. Матрица <i>А</i> = (<i>а</i><sub><i>ij</i></sub>) имеет седловую точку тогда и только тогда, когда нижняя цена игры равна ее верхней цене, т.е. </p>
+<p><i>α</i> = <i>β</i>. </p>
+<p>Игра, в которой максимин <i>α</i> равен минимаксу <i>β</i>, называется игрой с седловой точкой.  При этом величина <img src="img/p01.png"> называется чистой ценой игры, или просто, ценой игры.</p>
+<p>Если матрица имеет несколько седловых точек, то все они имеют одинаковые значения. </p>
+ 
+<p>Пример 6.2.  Дана матрица игры:</p>
+ 
+<table Table border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>1</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>2</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>3</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>4</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>α<sub>i</sub></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>A<sub>1</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>17</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>16</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>15</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>14</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>14</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>A<sub>2</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>11</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>18</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>12</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>13</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>11</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>A<sub>3</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>18</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>11</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>13</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>12</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>11</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>β<sub>j</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>18</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>18</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>15</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>14</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center></p>
+ </td>
+ </tr>
+ </table>
+ 
+<p>Таким образом, нижняя цена игры равна: </p>
+<p><img width=97 height=38 src="img/lec6.files/image014.png">
+=14, при этом максиминной стратегией является стратегия А<sub>1</sub>.</p>
+<p> Верхняя цена игры:</p>
+<p> <img
+width=139 height=40 src="img/lec6.files/image024.png">,</p>
+ <p>минимаксная стратегия второго  игрока В<sub>4</sub>. Элемент а<sub>14</sub> матрицы игры является седловой точкой матрицы.</p>
+<p>Пусть платежная матрица А имеет седловую точку <img width=40 height=36 src="img/lec6.files/image025.png">. Тогда стратегия <img width=28 height=33
+src="img/lec6.files/image026.png"> игрока А является его чистой максиминной стратегией, а стратегия <img width=31 height=32
+src="img/lec6.files/image027.png"> игрока В — его чистой минимаксной стратегией. </p>
+<p>Эти стратегии являются оптимальными стратегиями для игроков. Они обладают важным свойством устойчивости: ни одному из игроков невыгодно отклоняться от своей оптимальной стратегии, так как это может привести лишь к ухудшению его положения. </p>
+<p>Действительно, предположим, что в примере 6.2. игрок А выбрал другую чистую стратегию А<sub>i</sub> — i-ю строку матрицы А, а игрок В придерживается прежней стратегии <img width=32 height=33 src="img/lec6.files/image012.png">. Тогда значение выигрыша игрока 1 равно <img
+width=30 height=35 src="img/lec6.files/image028.png">. Так как <img width=38 height=34
+src="img/lec6.files/image029.png"> — седловая точка, то <img width=86 height=34
+src="img/lec6.files/image030.png">. Следовательно, выбрав другую стратегию, игрок А не сможет улучшить свой результат. Он может только потерять часть выигрыша, который ему гарантирован, если он придерживается своей оптимальной стратегии <img width=29 height=34
+src="img/lec6.files/image032.png">.</p>
+<p>Аналогичными рассуждениями легко показать, что и игроку В нет смысла изменять свою стратегию, поскольку, если его противник будет придерживаться своей оптимальной стратегии <img width=29 height=34 src="img/lec6.files/image032.png">, то в этом случае он может лишь ухудшить свой результат. В том случае, когда игроки  имеют несколько чистых максиминных (минимаксных) стратегий, они могут выбирать любую из них без изменения величины выигрыша. </p>
+<p>Таким образом, если игра имеет седловую точку, то оптимальной стратегией игрока А является его чистая максиминная стратегия, а оптимальной стратегией игрока В — его чистая минимаксная стратегия. Выбрав эту стратегию, игрок  А (игрок В) обеспечивает себе максимальный выигрыш (минимальный проигрыш) независимо от действий противника, равный значению игры. </p>
+<p>Любая пара оптимальных стратегий игроков образует решение игры, которое также называют ситуацией равновесия или равновесием.  </p>
+<p>Если игра не имеет седловой точки (α < β), то максиминная и минимаксная стратегии игроков уже не обладают свойством устойчивого равновесия. Каждый из игроков может попытаться изменить ситуацию в свою пользу и добиться выигрыша n, где</p>
+<p>α < n < β.</p>
+ <p>Правда, в этом случае он рискует, так как ни одна из его чистых стратегий не способна обеспечить ему этот результат.</p>
+
+<a name=2 class="anchor"></a><h3>6.2. Смешанные стратегии</h3>
+<p>Если игра не имеет решения в чистых стратегиях (α < β), то наличие у противника информации о том, какую стратегию выбрал игрок, может существенно повлиять на его конечный результат. В этом случае максиминная и минимаксная стратегии игроков уже не обладают свойством устойчивого равновесия. Каждый из игроков может попытаться изменить ситуацию в свою пользу и добиться выигрыша n, где α < n < β. Правда, при этом он рискует, так как ни одна из его чистых стратегий не может обеспечить ему этот результат.</p>
+<p>Если игра состоит из одной партии, и игрок не хочет рисковать, то, как и в игре с седловой точкой, ему следует придерживаться принципа максимина. Если же играется не одна, а несколько партий, он может, надеясь добиться большего, отказаться от получения гарантированного результата с помощью выбора соответствующей чистой стратегии. В этом случае он старается максимизировать свой средний выигрыш.</p>
+<p>Однако чтобы добиться успеха в такой игре, каждый игрок должен, во-первых, менять свои стратегии и, во-вторых, выбирать свою текущую стратегию таким образом, чтобы информация о его выборе не стала известна противнику. Невыполнение любого из этих условий может привести к тому, что выигрыш игрока окажется не больше, а меньше его гарантированного выигрыша. </p>
+<p>Чтобы избежать этого, игроку нужно чередовать ("смешивать") свои чистые стратегии, причем в каждой партии стратегия должна выбираться случайным образом с некоторой заданной вероятностью. Эта тактика позволит ему скрыть свой выбор от противника. По своей сути такое поведение игрока также является некоторой стратегией, которая в отличие от первоначально заданных чистых стратегий носит название смешанной стратегии. </p>
+<p>Смешанной стратегией игрока называется вектор, каждая компонента которого показывает с какой вероятностью (относительной частотой) он будет использовать свою чистую стратегию. </p>
+<p>Будем обозначать смешанную стратегию игрока А в виде вектора х = (х<sub>1</sub>,..., х<sub>m</sub>), где х<sub>i</sub> — вероятность применения чистой стратегии <i>i</i>. Таким образом, множество Х смешанных стратегий игрока 1 имеет такой вид:</p>
+<p>Х = { х = (х<sub>1</sub>,…, х<sub>m</sub>) │ <img src="img/lec6.files/image033.png">}.                               <b>(6.4)</b></p>
+<p>Соответственно, смешанную стратегию игрока В будем обозначать в виде вектора у = (у<sub>1</sub>,…, у<sub>n</sub>), где у<sub>j</sub> — вероятность применения чистой стратегии B<sub>j</sub>, т.е. множество Y смешанных стратегий игрока В выглядит так: </p>
+<p>Y = { у = (у<sub>1</sub>,…, у<sub>n</sub>) │  <img src="img/lec6.files/image034.png"> <img src="img/lec6.files/image035.png">}.                             <b>(6.5)</b></p>
+<p>Чистую стратегию можно считать частным случаем смешанной стратегии (она используется с вероятностью, равной 1, а остальные чистые стратегии игрока — с вероятностью, равной 0). </p>
+<p>Так, чистая стратегия <i>А<sub>i</sub></i> игрока А задается m-мерным вектором вида: (0,…, 1, 0,…0), у которого i-я компонента равна 1, а остальные компоненты нулевые. Соответственно, чистая стратегия В<sub>j</sub> игрока В задается n-мерным вектором (0,…, 1, 0,…0), у которого j-я компонента равна 1, а остальные компоненты нулевые.</p>
+<p>Новая игра называется игрой в смешанных стратегиях. Матрицу этой игры можно представить в таком виде:</p>
+ 
+<table Table border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p></p>
+ </td>
+ <td width=63>
+ <p align=center><i>В</i><sub>1</sub></p>
+ </td>
+ <td width=66 valign=bottom style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>В</i><sub>2</sub></p>
+ </td>
+ <td width=76 valign=bottom >
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>В</i><i><sub>n</sub></i></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>1</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>11</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>12</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>1<i>n</i></sub></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>x</i><i><sub>1</sub></i></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>2</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>21</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>22</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>2<i>n</i></sub></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>x</i><i><sub>2</sub></i></p>
+ </td>
+ </tr>
+<tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'>...</p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'>...</p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>...</p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>...</p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center>...</p>
+ </td>
+ </tr> 
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>m</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>m1</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>m2</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>...</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>m<i>n</i></sub></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>x</i><i><sub>m</sub></i></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p></p>
+ </td>
+ <td width=63>
+ <p align=center><i>y</i><sub>1</sub></p>
+ </td>
+ <td width=66 valign=bottom style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>y</i><sub>2</sub></p>
+ </td>
+ <td width=76 valign=bottom >
+ <p align=center><b>...</b></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>y</i><i><sub>n</sub></i></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center></p>
+ </td>
+ </tr>
+ </table>
+ 
+<p>При использовании смешанных стратегий величина выигрыша в отдельной партии является случайной величиной. Как уже говорилось, цель игрока состоит в максимизации своего среднего выигрыша в партии. По закону больших чисел при многократном повторении игры средний выигрыш близок к математическому ожиданию выигрыша. </p>
+<p>Отсутствие обмена информацией между игроками делает их случайные выборы своих чистых стратегий независимыми. Поэтому, если игрок А использует свою чистую стратегию А<sub>i</sub> с вероятностью х<sub>i</sub>, а игрок В — свою чистую стратегию В<sub>j</sub> с вероятностью y<sub>j</sub>, то математическое ожидание выигрыша при выборе игроками этих стратегий равно а<sub>ij</sub>х<sub>i</sub>y<sub>j</sub>. </p>
+<p>В том случае, когда игрок А использует смешанную стратегию х = (х<sub>1</sub>,…, х<sub>m</sub>), а игрок В — смешанную стратегию у = (у<sub>1</sub>,…, у<sub>n</sub>), выигрыш Н(х, y) игрока А определяется по формуле вычисления математического ожидания суммы независимых событий, т.е. </p>
+<p><img width=364 height=54 src="img/lec6.files/image036.png">.  <b>(6.6)</b></p>
+<p>Функция Н(х, y), задаваемая формулой (6.6), называется функцией выигрыша игры в смешанных стратегиях. Ее значение в ситуации (х, y) равно математическому ожиданию выигрыша (ожидаемому выигрышу) игрока А.</p>
+<p>Итак игра, называемая игрой в смешанных стратегиях, задается множествами смешанных стратегий игроков Х, Y и функцией выигрыша Н(х, y). Она является расширением исходной матричной игры, задаваемой множествами чистых стратегий игроков ,  и платежной матрицей А = (a<sub>ij</sub>).</p>
+<p>Рассмотрим, как выглядит функция выигрыша в ситуациях, когда хотя бы один из игроков выбирает свою чистую стратегию.</p>
+<p>1) Игрок А выбирает чистую стратегию А<sub>i</sub>, а игрок В — смешанную стратегию у = (у<sub>1</sub>, ... , у<sub>n</sub>). Так как чистая стратегия А<sub>i</sub> игрока А задается вектором х = (0,…, 1, 0,…0), у которого i-я компонента равна 1, а остальные компоненты нулевые, то значение функции выигрыша <img
+width=168 height=62 src="img/lec6.files/image039.png">.</p>
+<p>2) Игрок А выбирает смешанную стратегию х = (х<sub>1</sub>,…, х<sub>m</sub>), а игрок В — чистую стратегию В<sub>j</sub>. Так как чистая стратегия В<sub>j</sub> игрока В задается вектором y = (0,…, 1, 0,…0), у которого j-я компонента равна 1, а остальные компоненты нулевые, то значение функции выигрыша <img width=168 height=58 src="img/lec6.files/image040.png">.</p>
+<p>3) Игрок A выбирает чистую стратегию А<sub>i</sub> а игрок B — чистую стратегию В<sub>j</sub>. В этом случае значение функции выигрыша , т.е. совпадает со значением функции выигрыша в исходной игре.</p>
+<p>4) Игрок А выбирает смешанную стратегию х = (х<sub>1</sub>,…, х<sub>m</sub>), игрок В — смешанную стратегию у = (у<sub>1</sub>,…, у<sub>n</sub>). В этом случае значение функции выигрыша равно <img src="img/lec6.files/image042.png">.</p>
+<p>Отметим, если игрок придерживается некоторой смешанной стратегии, то для определения выбора конкретной чистой стратегии в текущей партии перед ее началом должен быть использован некоторый механизм случайного выбора, реализующий эту смешанную стратегию. </p>
+<p>Пусть, например, игрок А имеет две чистых стратегии, и смешанная стратегия задается вектором (1/2, 1/2), т.е. он выбирает свои чистые стратегии А<sub>1</sub> и А<sub>2</sub> с одинаковыми вероятностями. В этом случае перед началом каждой партии он может подбрасывать монету и при выпадении "решки" выбирать стратегию А<sub>1</sub>, а при выпадении "орла" — стратегию А<sub>2</sub>.</p>
+<p>Если игрок 1 имеет три чистых стратегии и смешанная стратегия задается вектором (1/2, 1/3, 1/6), то в качестве механизма случайного выбора можно использовать урну, в которой находятся три белых, два красных и один черный шар. Перед началом партии игрок должен вынуть из урны шар, а затем положить его снова в урну. Если вынут белый шар, то он должен использовать стратегию А<sub>1</sub>, если красный, то стратегию А<sub>2</sub>, а если черный, то стратегию А<sub>3</sub>.</p>
+<p>В некоторых случаях возможно "смешивание" чистых стратегий. Тогда смешанную стратегию х = (х<sub>1</sub>,…, х<sub>m</sub>) можно реализовать в виде физической смеси чистых стратегий. Она задает доли чистых стратегий в этой смеси, т.е. x<sub>i</sub> — доля стратегии А<sub>i</sub>. в смеси стратегий. Пусть, например, инвестор располагает некоторой суммой и собирается вложить ее в акции различных компаний. В этом случае его чистой стратегией можно считать покупку акций данной компании, и число чистых стратегий равно числу компаний. Смешанная стратегия допускает такую реализацию: ее компонента x<sub>i</sub> — доля общей суммы, на которую покупаются акции i-ой компании.</p>
+<p>Справедлива теорема, называемая основной теоремой матричных игр,·которая была доказана фон Нейманом в 1928 г.</p>
+<p>Теорема 6.2. Всякая матричная игра с нулевой суммой имеет решение в смешанных стратегиях. </p>
+<p>Итак, если матричная игра не имеет решения в чистых стратегиях (платежная матрица не имеет седловой точки), то следует рассмотреть ее расширение — игру в смешанных стратегиях. Решение этой игры всегда существует. Его образуют оптимальные смешанные стратегии игроков, отклонение от этих стратегий не выгодно ни одному из игроков: они образуют ситуацию равновесия.</p>
+
+
+<a name=3 class="anchor"></a><h3>6.3. Доминирование стратегий</h3>
+<p>В ряде случаев часть чистых стратегий игроков может быть исключена после анализа платежной матрицы путем вычеркивания соответствующих строк или столбцов. При этом стратегии, являющиеся оптимальными в игре с сокращенной матрицей, будут оптимальными стратегиями и для исходной игры. В основе такого анализа лежит принцип доминирования. Он исходит из того факта, что если одна из стратегий игрока лучше чем другая (дает ему больший выигрыш) независимо от стратегии противника, то при анализе стратегий на оптимальность худшая может не рассматриваться. Игрок не будет ее использовать ни при каких обстоятельствах, так как это противоречит принципу рациональности его поведения.</p>
+<p>Будем говорить, что вектор х = (х<sub>1</sub>,…, х<sub>n</sub>) строго доминирует вектор z = (z<sub>1</sub>,…, z<sub>n</sub>), если <img src="img/lec6.files/image045.png"> для всех <img src="img/lec6.files/image044.png">. </p>
+<p>Теорема 6.3 (правило отбрасывания доминируемых стратегий). Пусть А — платежная матрица игры. Тогда</p>
+<p>а) если j-я строка матрицы А строго доминирует i-ю строку, то i-ю строку можно вычеркнуть из матрицы А без изменения множества оптимальных стратегий игрока А;</p>
+<p>б) если j-й столбец матрицы А строго доминирует i-й столбец, то j-й столбец можно вычеркнуть из матрицы А без изменения множества оптимальных стратегий игрока В.</p>
+<p>Эта теорема утверждает, что при наличии строгого доминирования вычеркнутая строка (столбец) не может войти в оптимальную стратегию с положительной вероятностью, т.е. ей (ему) всегда соответствует нулевая компонента в соответствующей оптимальной стратегии. Таким образом, исключение строго доминируемых стратегий не изменяет множества решений игры. Более слабым типом доминирования является нестрогое доминирование. </p>
+<p>Будем говорить, что вектор х = (х<sub>1</sub>,…, х<sub>n</sub>) нестрого доминирует вектор z = (z<sub>1</sub>,…, z<sub>n</sub>), если  для всех <img src="img/lec6.files/image046.png"> и по крайней мере для одного индекса <img src="img/lec6.files/image047.png">  выполнено строгое неравенство <img src="img/lec6.files/image048.png">.</p>
+<p>Если имеет место нестрогое доминирование строк (столбцов), то также можно вычеркнуть соответствующую строку (столбец). В этом случае множество решений в игре с уменьшенной матрицей, вообще говоря, изменяется. Однако всякое решение игры с уменьшенной матрицей будет решением исходной игры. Можно также утверждать, что если в игре имеется доминируемая чистая стратегия, то существует оптимальная смешанная стратегия, в которой ей соответствует нулевая компонента.</p>
+<p>Использование принципа доминирования позволяет существенно сократить размерность исходной платежной матрицы.</p>
+<p>Пример 6.3.  Дана матрица игры:</p>
+
+<table Table border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>1</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>2</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>3</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>4</sub></p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>5</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>B<sub>6</sub></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>А<sub>1</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>1</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>2</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>3</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>4</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>4</p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>7</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>А<sub>2</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>7</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>6</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>5</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>4</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>4</p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>8</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>А<sub>3</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>1</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>8</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>2</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>3</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>3</p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>6</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:double windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>А<sub>4</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>8</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>1</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>3</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>2</p>
+ </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>2</p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>5</p>
+ </td>
+ </tr>
+ </table>
+
+<p>В  этой матрице с доминируемыми и дублирующими стратегиями стратегия A<sub>1</sub> является доминируемой по отношению к стратегии A<sub>2</sub>, стратегия B<sub>6</sub> является доминируемой по отношению к стратегиям B<sub>3</sub>, B<sub>4</sub> и B<sub>5</sub>, а стратегия B<sub>5</sub> является дублирующей по отношению к стратегии B<sub>4</sub>. </p>
+<p>Данные стратегии не будут выбраны игроками, так как являются заведомо проигрышными и удаление этих стратегий из платежной матрицы не повлияет на определение нижней и верхней цены игры, описанной данной матрицей. Иными словами, частоты применения стратегий  A<sub>1</sub>, B<sub>5</sub>, B<sub>6</sub> будут равны нулю. (Отметим, что для игрока В невыгодной будет стратегия, которая дает ему заведомо больший проигрыш, или , что тоже самое, дает возможность игроку А выиграть больше по сравнению с другими стратегиями).</p>
+ 
+<p>Пример 6.4. Рассмотрим игру с платежной матрицей</p>
+<p><img width=153 height=84 src="img/lec6.files/image049.png"></p>
+
+<p>Вторая строка этой матрицы строго доминирует первую строку и нестрого — третью строку. Поэтому оптимальной стратегией первого игрока является выбор второй строки. Анализ столбцов показывает, что первый столбец строго, а второй и третий нестрого доминируют четвертый столбец. Следовательно, оптимальной стратегией второго игрока является выбор четвертого столбца. </p>
+<p>Таким образом, анализ матрицы А показывает, что игра имеет решение в чистых стратегиях <img src="img/lec6.files/image050.png">. Этот же результат можно получить, найдя седловую точку — элемент <img
+width=35 height=36 src="img/lec6.files/image051.png">.</p>
+
+<a name=4 class="anchor"></a><h3>6.4. Решение матричной игры путем ее сведения к задаче линейного программирования</h3>
+
+<p>Общим методом решения матричной игры, не имеющей седловой точки, является ее сведение к задаче линейного программирования. Пусть игрок А имеет m чистых стратегий, а игрок В — n чистых стратегий. Тогда матрица игры имеет вид:</p>
+<table Table border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p></p>
+ </td>
+ <td width=63>
+ <p align=center><i>В</i><sub>1</sub></p>
+ </td>
+ <td width=66 valign=bottom style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>В</i><sub>2</sub></p>
+ </td>
+ <td width=76 valign=bottom >
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>В</i><i><sub>n</sub></i></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>1</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>11</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>12</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>1<i>n</i></sub></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>x</i><i><sub>1</sub></i></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>2</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>21</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>22</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>2<i>n</i></sub></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>x</i><i><sub>2</sub></i></p>
+ </td>
+ </tr>
+<tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'>...</p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'>...</p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>...</p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>...</p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center>...</p>
+ </td>
+ </tr> 
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>m</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>m1</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>m2</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>...</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>m<i>n</i></sub></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>x</i><i><sub>m</sub></i></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p></p>
+ </td>
+ <td width=63>
+ <p align=center><i>y</i><sub>1</sub></p>
+ </td>
+ <td width=66 valign=bottom style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>y</i><sub>2</sub></p>
+ </td>
+ <td width=76 valign=bottom >
+ <p align=center><b>...</b></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>y</i><i><sub>n</sub></i></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center></p>
+ </td>
+ </tr>
+ </table>
+
+<p></p>
+<p>Для нахождения оптимальной стратегии игрока А и цены игры следует решить задачу линейного программирования </p>
+<p>Задача игрока А</p>
+<p>x<sub>m+1</sub>→ max,                                               </p>
+<p><img width=272 height=102 src="img/lec6.files/image052.png"> ,   </p>
+<p><img width=159 height=35 src="img/lec6.files/image053.png"> , </p>
+<p><img width=157 height=32 src="img/lec6.files/image054.png"> .</p>
+<p>В этой задаче m+1 переменная и n+1 ограничение. Переменными в ней являются нижняя оценка выигрыша    <i>x<sub>m+1</sub></i> и вектор смешанных стратегий х = (х<sub>1</sub>,…, х<sub>m</sub>) игрока А. Переменная x<sub>m+1</sub> может быть любого знака, а все компоненты вектора х должны быть неотрицательны, причем их сумма равна единице. Смысл первых n ограничений задачи состоит в том, что, как бы не играл игрок В, игрок А, играя своей смешанной стратегией, должен получать выигрыш не меньше некоторой нижней оценки x<sub>m+1</sub> .  При этом  ищется максимальное значение переменной x<sub>m+1</sub> . </p>
+<p>Аналогично, нахождение оптимальной стратегии игрока В и цены игры можно свести к решению следующей задачи:</p>
+<p>Задача игрока В</p>
+                                                   <p>y<sub>n+1</sub>→ min,   
+<img width=250 height=95 src="img/lec6.files/image055.png"> , </p>
+<p><img width=144 height=32 src="img/lec6.files/image056.png"></p>
+<p><img width=158 height=32 src="img/lec6.files/image057.png">.</p>
+<p>Она содержит n+1 переменную и m+1 ограничение. Ее переменные: вектор стратегий <i>у = (у<sub>1</sub></i>, ... , <i>у<sub>n</sub></i>) игрока B и верхняя оценка выигрыша игрока А <i>y<sub>n+1</sub></i>  (или, что тоже самое, верхняя оценка проигрыша игрока В). Смысл первых m ограничений задачи состоит в том, что, как бы не играл игрок А, игрок В, играя своей смешанной стратегией, должен получать проигрыш не больше некоторой его верхней оценки <i>y<sub>n+1</sub></i>. При этом ищется минимальное значение переменной <i>y<sub>n+1</sub></i>.</p>
+<p>Легко проверить, что эти задачи являются двойственными по отношению друг к другу. Можно доказать, что для любой платежной матрицы эти задачи всегда имеют оптимальные решения. Поэтому справедливость основной теоремы матричных игр о разрешимости любой игры в смешанных стратегиях является следствием теоремы двойственности для задачи линейного программирования. При этом   значения целевых функций на оптимальных решения равны, то есть</p>
+<p></p>
+<img width=136 height=33 src="img/lec6.files/image058.png">
+<p>где <img src="img/lec6.files/image058n.png"> и есть цена игры.</p>
+ <p></p>
+<p>Пример 6.5. Пусть дана матричная игра с платежной матрицей </p>
+<p><img width=105 height=60 src="img/lec6.files/image059.png">.</p>
+<p>Тогда пара двойственных задач, эквивалентная этой матричной игре, имеет такой вид:</p>
+<p>Задача игрока А:</p>
+<p><img width=92 height=31 src="img/lec6.files/image060.png"></p>
+<p><img width=155 height=150 src="img/lec6.files/image061.png"></p>
+<p>Задача игрока В:</p>
+<p><img width=18 height=27 src="img/lec6.files/image062.png"> → min,</p>
+
+<p><img width=202 height=118 src="img/lec6.files/image063.png"></p>
+
+<p></p>
+<p>Таким образом, решение матричной игры сводится к решению пары двойственных задач линейного программирования.</p>
+<p>Замечание. Полученные задачи линейного программирование можно решить, например, в  пакете EXCEL. Технология решения была описана в теме "Задачи линейного программирования" дисциплины "ИССЛЕДОВАНИЕ ОПЕРАЦИЙ".</p>
+<p>Решением игры является пара оптимальных стратегий игроков A и B соответственно:</p>
+<p>X*=(0,75; 0,5) ,</p>
+<p> Y*=(0; 0,5; 0,5).</p>
+<p>Цена игры <img src="img/lec6.files/image058n.png">=2,5 - это тот средний выигрыш, который будет получать игрок А, придерживаясь своей оптимальной стратегией, то есть  играя в 75% случаев своей чистой первой стратегией и в 25% случаев чистой второй стратегией. Оптимальная смешанная стратегия игрока B - не использовать первую чистую стратегию, а играть только второй и третьей, причем с одинаковыми частотами.</p>
+
+<a name=q class="anchor"></a>
+<h3>Контрольные вопросы</h3>
+<ol type=1>
+<li>Почему для задания матричной игры достаточно задать только матрицу выигрышей одного игрока?</li>
+<li>Что такое чистые и смешанные стратегии игроков?</li>
+<li>Какая стратегия в матричной игре называется оптимальной?</li>
+<li>Что такое нижняя цена игры и как ее определить?</li>
+<li>Что такое верхняя цена игры и как ее определить?</li>
+<li>Какими свойствами обладает максиминная и минимаксная стратегии игроков?</li>
+<li>Являются ли максиминная и минимаксная стратегии игроков оптимальными?</li>
+<li>Что такое седловая точка матрицы игры и  при каких условиях она существует?</li>
+<li>Что такое цена игры и как это понятие связано с понятиями верхней и нижней ценой игры?</li>
+<li>В чем состоит основная теорема матричных игр (теорема Неймана)?</li>
+<li>Как задается смешанная стратегия игрока?</li>
+<li>Выпишите функции выигрышей (проигрышей) игроков, если они используют свои смешанные стратегии.</li>
+<li>Как определить доминирующие стратегии первого игрока (игрока А) в матричной игре?</li>
+<li>Как определить доминирующие стратегии второго игрока (игрока В) в матричной игре?</li>
+<li>Сформулируйте задачи игроков в матричной игре как задачи линейного программирования. В чем состоят целевые функции этих задач и какова интерпретация ограничений?</li>
+<li>Покажите, что сформулированные задачи игроков действительно являются парой взаимодвойственных задач линейного программирования.</li>
+</ol>
+
+<br><br>
+<!--конец-->
+      
+				
+
+				</div>
+			</div>
+			
+      </div>
+    </div>
+  </div>
+	
+	<!--Меню навигации по Темам -->	
+	<div aria-label="..." class = "nav-menu">
+	 <ul class="pager background-transition-slow">
+		 <li title="Наверх" style = "margin-right:15px;	"><a class = "glyphicon glyphicon-menu-up page-scroll" href="#page-top"></a></li>
+		 <li title="К предыдущей лекции"><a class = "glyphicon glyphicon-menu-left page-scroll" href="lec5.htm"></a></li>
+		 <li title="В содержание"><a class = "glyphicon glyphicon-list-alt" href="lec_index.htm"></a></li>
+	 </ul>
+	</div>
+	<!---->
+	
+	</div>
+  <!-- jQuery -->
+  <script src="../lib/js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../lib/js/bootstrap.min.js"></script>
+
+  <!-- Scrolling Nav JavaScript -->
+  <script src="../lib/js/jquery.easing.min.js"></script>
+  <script src="../lib/js/scrolling-nav.js"></script>
+
+</body>
+
+</html>

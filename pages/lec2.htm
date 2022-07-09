@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="do.sibsutis.ru">
+
+  <title>ТЕМА 2. Конспект лекций</title>
+	
+	<link rel="icon" type="image/png" href="../lib/css/favicon.png">
+  <!-- Bootstrap Core CSS -->
+  <link href="../lib/css/bootstrap.css" rel="stylesheet">
+	
+  <!-- Custom CSS -->
+  <link href="../lib/css/scrolling-nav.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+ <div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+   <li class="hidden"> <a class="page-scroll" href="#page-top"></a> </li>
+	 
+	 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+   </button>
+	 
+   <a class="navbar-brand " href="../index.htm"> 
+  <text class = "hidden-xs">Исследование операций</text> 
+  <text class = "visible-xs">ИО</text>
+	 </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and glyphicon glyphicon-list-alt content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+   
+	 <!-- <ul class="nav navbar-nav">
+		<li><a href="#"></a></li> 
+   </ul> -->
+	
+   <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+		<button type="button" class="navbar-toggle dropdown-toggle hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>	   
+		<a class = "dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Материалы</a>
+     <ul class="dropdown-menu">
+<li><a href="../index.htm">Аннотация курса</a></li>
+
+      <li role="separator" class="divider"></li>
+    
+  <li><a href="lec_index.htm">Теория</a></li>
+   
+      <li><a href="c_work.htm">Контрольная работа</a></li>
+ 
+      <li><a href="gloss.htm">Глоссарий</a></li>
+    <li role="separator" class="divider"></li>
+  
+    
+    <li><a href="lit.htm">Литература</a></li>
+ 
+      <!--li><a href="q.htm">Вопросы для самопроверки</a></li-->			
+     </ul>
+ </li>
+ </ul>
+  </div><!-- /.navbar-collapse -->
+ </div><!-- /.container-fluid -->
+</nav>
+
+
+  <div id="intro" class="section content-section ">
+    <div class="container">
+       <div class="row">
+        <div class="col-lg-12">	
+
+
+<!-- содержание -->	
+<div class="page-header">				
+<h3><a href="#">Тема 2. Принятие решений в условиях полной определенности</a></h3>
+<a href="#1" class=punkt>2.1. Альтернативы и критерии оценки альтернатив</a><br>
+<a href="#2" class=punkt>2.2. Роль информации при принятии решений</a><br>
+<a href="#2" class=punkt>2.3. Принятие решений в условиях определенности</a><br>
+<a href="#q" class=punkt>Контрольные вопросы</a><br>
+</div>
+<!--начало-->
+<a name=1 class="anchor"></a>
+<h3>2.1. Альтернативы и критерии оценки альтернатив</h3>
+
+<p>При  построении  математической  модели  принятия  решения  введем  два основных понятия теории принятия решений.</p>
+
+<div class="row">
+ <div class="col-lg-10">
+   <div class="alert alert-info"><h4><br></h4>
+<p><i>Альтернатива</i> -  вариант,  конкретные правила  действий,  которые  возможны  для  ЛПР  при  принятии  решений.</p>
+</div>
+ </div>
+</div>
+<div class="row">
+ <div class="col-lg-10">
+   <div class="alert alert-info"><h4><br></h4>
+<p><i>Критериями  оценки  альтернатив</i> - показатели  привлекательности  (или  непривлекательности) альтернатив  для участников  процесса выбора  решения, в частности, для ЛПР.</p>
+</div>
+ </div>
+</div>
+
+<p>Альтернативой  (или  стратегией)  называется  вариант,  конкретные правила  действий,  которые  возможны  для  ЛПР  при  принятии  решений.  Сам процесс принятия решений  состоит в выборе ЛПР оптимальной альтернативы, наиболее  выгодной  для  него.  Например,  при  взятии  кредита  директором предприятия  его  альтернативами  служат  банки,  готовые  предоставить  кредит. </p>
+<p>Альтернатив может быть несколько, все их можно  перечислить  и  четко  определить  -  например,  какой  выбрать  банк  для кредита  из  нескольких  имеющихся,  сколько  яиц  нужно  сварить  для  салата. Такие  альтернативы  назовем  дискретными.  Однако,  количество  альтернатив может быть  и  бесконечным, все  их перечислить нельзя, они могут изменяться непрерывно  –  например, сколько денег взять в  кредит из банка. Такие альтернативы назовем непрерывными. </p>
+<p>Критериями  оценки  альтернатив  (или  просто  критериями)  будем называть  показатели  привлекательности  (или  непривлекательности) альтернатив  для участников  процесса выбора  решения, в частности, для ЛПР. Именно оценка критериев служит базой для выбора наилучшей альтернативы. Например,  при  выборе  банка  руководитель  предприятия  использует  такие критерии,  как  процентная  ставка,  надежность  банка,  условия  предоставления  кредита  и  др.  критерии.   </p>
+<p>Критерии  могут  быть  количественные  и  качественные.  Если  показатель привлекательности  можно  точно  оценить  численным  значением пропорциональным  показателю,  то  он  является  количественным.  Например, количественными являются критерии связанные с показателями цены, прибыли или затрат (рубли), времени (часы, дни и т.д.), размеры (метры), площади (м<sub>2</sub>) и подобные  им. </p>
+<p> Однако  часто  показатели  критериев  нельзя  точно  связать  с каким-либо  числом.  В  этом  случае  он  является  качественным.  Его  в  этом случае  можно  лишь  охарактеризовать  терминами  сравнения:  «лучше  -  хуже», «дальше - ближе»,  «больше - меньше»  и  другими.  Для  применения математических  методов  анализа  качественных  критериев  необходимо  задать им  количественные  характеристики.  Для  этого  применяются  экспертные оценки критериев, при которых специалисты в данной области либо оценивают по  n-мерной  шкале  показатель  привлекательности  критериев  для  каждой альтернативы, либо сравнивают попарно все показатели критериев  для каждой альтернативы  и рассчитывают вес альтернатив по каждому критерию.</p>
+<p>В  профессиональной  деятельности  выбор  критериев  часто  определяется многолетней  практикой, опытом. В подавляющем большинстве задач  имеется достаточно  много  критериев  оценок  вариантов  решений.  Эти  критерии  могут быть  однонаправленными,  противоречивыми  или  независимыми.  Если улучшение  одного  критерия  приводит  к  улучшению  другого,  то  критерии однонаправленные, например объемы продаж и прибыль, опыт юриста и шанс на успех. Если же нельзя одновременно улучшить оба критерия (улучшая один, второй  ухудшается), то критерии  противоречивые, например цена и качество, гонорар адвоката и его профессионализм. Часто бывает, что критерии никак не влияют  друг  на  друга  и  для  одной  группы  альтернатив  одновременно улучшаются, а для другой - изменяются в разных направлениях.  </p>
+<p>Если для альтернативы А все критерии имеют лучшие показатели, чем эти же  критерии  для  альтернативы  В,  то  альтернатива  А  называется доминирующей,  а  В  –  доминируемой.  В  такой  ситуации  доминируемую альтернативу В можно исключить из рассмотрения и вывести из задачи.</p>
+
+<a name=2 class="anchor"></a>
+<h3>2.2. Роль информации при принятии решений</h3>
+
+<p>Разработка управленческого решения предполагает использование определенного объема информации. Полнота исходной информации, в свою очередь, обусловливает разделение управленческих решений на решения, принимаемые в условиях определенности, риска и неопределенности.</p>
+<p>Решение принимается в условиях определенности, когда руководитель точно знает результат каждого из альтернативных вариантов решения.  </p>
+<p>Решение считается принимаемым в условиях риска, если известна функция распределения вероятностей всех альтернативных решений. При этом сумма вероятностей всех альтернатив в дискретном случае должна быть равна единице. </p>
+<p>Решение принимается в условиях неопределенности тогда, когда невозможно определить вероятность потенциальных результатов. Как правило, подобная ситуация в деятельности фирм складывается при их инновационной ориентации, при невозможности собрать необходимые представительные статистические и другие данные для определения уровня риска, при дороговизне процедур сбора и обработки информации, при невозможности привлечь опытных экспертов, предпринимателей или специалистов в сфере принимаемого управленческого решения.</p>
+
+<a name=3 class="anchor"></a>
+<h3>2.3. Принятие решений в условиях определенности</h3>
+
+<p>Рассмотрим  вначале  простейший  случай,  когда  оценки привлекательности альтернатив по каждому критерию качественные и имеются экспертные  оценки  критериев  по  одной  и  той  же  (например,  десятибалльной) шкале. Пусть имеется n  альтернатив и  k  критериев.  Обозначим U<sub>ij</sub>   -  оценку  i-й альтернативы  по  j-му  критерию.  Очевидно,  что  критерии  имеют  различную  важность. Одни оказывают большее влияние на принятое в результате решение, другие меньшее. Назовем степень важности каждого критерия его весом. Пусть вес  j-го  критерия  равен W<sub>j</sub>.  Вес  критерия  измеряется  по  любой пропорциональной  шкале  (например,  от  0  до  1  или  по  десятибалльной  или любой  другой  шкале).  Веса  критериев  определяют  либо  эксперты,  либо непосредственно ЛПР.</p>
+<p>Итак,  если  известны  оценки  альтернатив,  веса  критериев  и  если решается  задача на максимизацию, то есть  чем выше оценка альтернативы, тем она  более  привлекательна,  то  для  принятия  оптимального  решения  нужно вычислить функции полезности каждой альтернативы F<sub>i</sub>  по формулам:</p>
+<img width=224 height=30 src="img/lec2.files/image001.gif">,
+<p>и принимается та альтернатива, для которой функция полезности максимальна. </p>
+<p>Если  решается  задача  минимизации  (чем  меньше  оценка  альтернатив  по критериям,  тем  привлекательнее  альтернатива),  то  выбирается  альтернатива  с меньшей функцией полезности. Рассмотрим пример.</p>
+<br>
+<h4><b>Пример 2.1.</b></h4>
+<p> Директор предприятия желает заключить договор с одной из ремонтно-сервисных  компаний  на  обслуживание  автоматизированной сборочной  линии.  Ему  предлагают  свои  услуги  четыре  компании,  которые условно  обозначим  А,  В,  С  и  D.  Для  выбора  стороны  по  договору  директор выделяет  несколько  критериев.  В  первую  очередь  важна  стоимость обслуживания,  гарантийные  обязательства  и  прочие  накладные  расходы, которые  в  совокупности  назовем  «Финансовые  условия»,  директор  считает  их вес наибольшим и по единичной шкале оценивает в W<sub>1</sub>=0,5. Также немаловажна экспертная  оценка  надежности  компании,  их  репутация.  Данный  критерий имеет  оценку  веса W<sub>2</sub>=0,3.  Кроме  того  нельзя  не  учесть  такой  критерий  как быстрота  реагирования,  то  как  поставлена  система  обслуживания  линии,  как быстро  устраняются  неполадки  и  осуществляется  наладка.  Вес  этого  критерия W<sub>3</sub>=0,2.  Оценки  альтернатив  по  каждому  критерию  (чем  выше,  тем привлекательнее альтернатива) приведены в таблице 2.1.</p>
+<br>
+<h4><b>Таблица 2.1 – Данные задачи</b></h4>
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+ <td width=159 rowspan=2 valign=top style='width:119.6pt;border:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>Альтернативы 
+ </p>
+ </td>
+ <td width=479 colspan=3 valign=top style='width:358.95pt;border:solid black 1.0pt;
+ border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>Оценки
+ критериев (10-балльная шкала)</p>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'><span lang=EN-US style='font-size: 12.0pt;
+ font-family:"Arial","sans-serif"'>&nbsp;</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>Финансовые
+ условия</p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>Репутация</p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>Быстрота
+ реагирования</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=159 valign=top style='width:119.6pt;border:solid black 1.0pt;
+ border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>Компания
+ А</p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'> 
+ 4  </p>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'><span lang=EN-US style='font-size: 12.0pt;
+ font-family:"Arial","sans-serif"'>&nbsp;</p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>7 
+ </p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>9</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=159 valign=top style='width:119.6pt;border:solid black 1.0pt;
+ border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>Компания
+ В</p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'> 
+ 8  </p>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'><span lang=EN-US style='font-size: 12.0pt;
+ font-family:"Arial","sans-serif"'>&nbsp;</p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>3 
+ </p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>8</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=159 valign=top style='width:119.6pt;border:solid black 1.0pt;
+ border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>Компания
+ С</p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'> 
+ 6  </p>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'><span lang=EN-US style='font-size: 12.0pt;
+ font-family:"Arial","sans-serif"'>&nbsp;</p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>8 
+ </p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>4</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=159 valign=top style='width:119.6pt;border:solid black 1.0pt;
+ border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>Компания
+ D</p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'> 
+ 7  </p>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'><span lang=EN-US style='font-size: 12.0pt;
+ font-family:"Arial","sans-serif"'>&nbsp;</p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>2 
+ </p>
+ </td>
+ <td width=160 valign=top style='width:119.65pt;border-top:none;border-left:
+ none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+ justify;line-height:normal'>9</p>
+ </td>
+ </tr>
+</table>
+ 
+<p>Рассчитываем функции полезности для каждой альтернативы:</p>
+<p>F<sub>1</sub>=0,5*4+0,3*7+0,2*9=5,9;</p>
+<p>F<sub>2</sub>=0,5*8+0,3*3+0,2*8=5,7;</p>
+<p>F<sub>3</sub>=0,5*6+0,3*8+0,2*4=6,2;</p>
+<p>F<sub>4</sub>=0,5*7+0,3*2+0,2*9=5,9.</p>
+<p>Видно,  что  для  третьей  альтернативы  функция  полезности  максимальна, поэтому рациональнее всего ее принять и заключить договор с компанией С.</p>
+
+<a name=q class="anchor"></a>
+<h3>Контрольные вопросы</h3>
+<ol type=1>
+<li>Приведите содержательные примеры ситуаций, приводящих к проблемам индивидуального выбора.</li>
+<li>В придуманных вами примерах опишите множества альтернатив ЛПР.</li>
+<li>В придуманных вами примерах выделите критерий оценки альтернатив.</li>
+<li>Что такое доминирующая альтернатива? Приведите пример.</li>
+<li>Поясните отличие в принятии решений в условиях определенности, риска и неопределенности. Приведите примеры.</li>
+<li>Что такое функция полезности альтернативы?</li>
+
+</ol>
+
+<br><br>
+<!--конец-->
+      
+				
+
+				</div>
+			</div>
+			
+      </div>
+    </div>
+  </div>
+	
+	<!--Меню навигации по Темам -->	
+	<div aria-label="..." class = "nav-menu">
+	 <ul class="pager background-transition-slow">
+		 <li title="Наверх" style = "margin-right:15px;	"><a class = "glyphicon glyphicon-menu-up page-scroll" href="#page-top"></a></li>
+		 <li title="К предыдущей лекции"><a class = "glyphicon glyphicon-menu-left page-scroll" href="lec1.htm"></a></li>
+		 <li title="В содержание"><a class = "glyphicon glyphicon-list-alt" href="lec_index.htm"></a></li>
+		 <li title="К следующей лекции"><a class = "glyphicon glyphicon-menu-right page-scroll" href="lec3.htm"></a></li>
+	 </ul>
+	</div>
+	<!---->
+	
+	</div>
+  <!-- jQuery -->
+  <script src="../lib/js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../lib/js/bootstrap.min.js"></script>
+
+  <!-- Scrolling Nav JavaScript -->
+  <script src="../lib/js/jquery.easing.min.js"></script>
+  <script src="../lib/js/scrolling-nav.js"></script>
+
+</body>
+
+</html>

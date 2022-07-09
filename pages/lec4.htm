@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="do.sibsutis.ru">
+
+  <title>ТЕМА 4. Конспект лекций</title>
+	
+	<link rel="icon" type="image/png" href="../lib/css/favicon.png">
+  <!-- Bootstrap Core CSS -->
+  <link href="../lib/css/bootstrap.css" rel="stylesheet">
+	
+  <!-- Custom CSS -->
+  <link href="../lib/css/scrolling-nav.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+ <div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+   <li class="hidden"> <a class="page-scroll" href="#page-top"></a> </li>
+	 
+	 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+   </button>
+	 
+   <a class="navbar-brand " href="../index.htm"> 
+  <text class = "hidden-xs">Исследование операций </text> 
+  <text class = "visible-xs">ИО</text>
+	 </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and glyphicon glyphicon-list-alt content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+   
+	 <!-- <ul class="nav navbar-nav">
+		<li><a href="#"></a></li> 
+   </ul> -->
+	
+   <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+		<button type="button" class="navbar-toggle dropdown-toggle hidden-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>	   
+		<a class = "dropdown-toggle visible-xs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Материалы</a>
+     <ul class="dropdown-menu">
+<li><a href="../index.htm">Аннотация курса</a></li>
+
+      <li role="separator" class="divider"></li>
+    
+  <li><a href="lec_index.htm">Теория</a></li>
+   
+      <li><a href="c_work.htm">Контрольная работа</a></li>
+ 
+      <li><a href="gloss.htm">Глоссарий</a></li>
+    <li role="separator" class="divider"></li>
+  
+    
+    <li><a href="lit.htm">Литература</a></li>
+ 
+      <!--li><a href="q.htm">Вопросы для самопроверки</a></li-->			
+     </ul>
+ </li>
+ </ul>
+  </div><!-- /.navbar-collapse -->
+ </div><!-- /.container-fluid -->
+</nav>
+
+
+  <div id="intro" class="section content-section ">
+    <div class="container">
+       <div class="row">
+        <div class="col-lg-12">	
+
+
+<!-- содержание -->	
+<div class="page-header">				
+<h3><a href="#">Тема 4. Принятие решений в условиях неопределенности</a></h3>
+<a href="#1" class=punkt>4.1. Критерий Лапласа</a><br>
+<a href="#2" class=punkt>4.2. Критерий Вальда и критерий Сэвиджа</a><br>
+<a href="#3" class=punkt>4.3. Критерий максимального оптимизма</a><br>
+<a href="#4" class=punkt>4.4. Критерий Гурвица</a><br>
+<a href="#q" class=punkt>Контрольные вопросы</a><br>
+</div>
+<!--начало-->
+
+<p>В  рассмотренных  ранее  задачах  принятия  решения  в  условиях  риска известны оценки вероятностей, с которыми можно ожидать тот или иной исход при их случайном выборе. Однако, во многих практических задачах очень часто совершенно  не  известно,  с  какой  вероятностью  можно  ожидать  возможные сценарий  развития  ситуации.  Математическую  модель  принятия  решений  при таких  условиях  назовем  методом  принятия  решений  в  условиях неопределенности.</p>
+<p> Предположим,  что  ЛПР  выделяет  n  вариантов  развития  ситуации, которые обозначим S<sub>1</sub>, S<sub>2</sub>,... , S<sub>n</sub>  и  ЛПР  имеет m  альтернатив  решения  ситуации, которые обозначим A<sub>1</sub>, A<sub>2</sub>, ... ,  A<sub>m</sub>.    Таким образом ситуацию можно описать либо матрицей выигрышей ЛПР   </p>
+ 
+<table Table border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p></p>
+ </td>
+ <td width=63>
+ <p align=center><i>S</i><sub>1</sub></p>
+ </td>
+ <td width=66 valign=bottom style='width:49.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>S</i><sub>2</sub></p>
+ </td>
+ <td width=76 valign=bottom >
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=bottom>
+  <p align=center><i>S</i><i><sub>n</sub></i></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>1</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>11</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>12</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>1<i>n</i></sub></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>2</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>21</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>22</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>2<i>n</i></sub></p>
+ </td>
+ </tr>
+<tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'>...</p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'>...</p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>...</p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center>...</p>
+ </td>
+ </tr> 
+ <tr>
+ <td width=50 valign=top style='width:37.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=right style='text-align:right;text-indent:0cm'><i>A</i><sub>m</sub></p>
+ </td>
+ <td width=63 valign=top style='width:47.25pt;border-top:double 1.5pt;
+ border-left:double 1.5pt;border-bottom:solid 1.0pt;border-right:solid 1.0pt;
+ border-color:windowtext;padding:0cm 5.4pt 0cm 5.4pt'>
+ <p class=MsoPlainText align=center style='text-align:center;text-indent:0cm'><i>a</i><sub>m1</sub></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>m2</sub></p>
+ </td>
+ <td width=76 valign=top style='width:2.0cm;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><b>…</b></p>
+ </td>
+ <td width=66 valign=top style='width:49.6pt;border-top:double windowtext 1.5pt;
+ border-left:none;border-bottom:solid windowtext 1.0pt;border-right:double windowtext 1.5pt;
+ padding:0cm 5.4pt 0cm 5.4pt'>
+ <p align=center><i>a</i><sub>m<i>n</i></sub></p>
+ </td>
+ </tr>
+ </table>
+
+ 
+ 
+ 
+ 
+<p>A = <img width=115 height=34 src="img/lec4.files/image001.gif">,  либо матрицей рисков </p>
+<p>R=<img width=111 height=34 src="img/lec4.files/image002.gif">.</p>
+<p> Рассмотрим  основные  критерии,  позволяющие  выбирать  оптимальную альтернативу для принятия решения.</p>
+<a name=1 class="anchor"></a>
+<br>
+<br>
+<h3>4.1. Критерий Лапласа</h3>
+<p>Он основан на предположении, что  каждый вариант развития ситуации (состояния  «природы»)  равновероятен, то есть вероятность каждой ситуации S<sub>j</sub> равна  <img width=9 height=35 src="img/lec4.files/image003.gif">. Поэтому,  для  принятия  решения, необходимо  рассчитать  функцию  полезности F<sub>i</sub> для  каждой  альтернативы, равную  по сути среднеарифметическому  показателей  привлекательности  по  каждому «состоянию природы»:</p>
+<p><img width=104 height=67 src="img/lec4.files/image004.gif"></p>
+<p>Выбирается  та  альтернатива,  для  которой  функция  полезности  максимальна.</p>
+<p> С другой стороны, если задана матрица рисков R=<img width=111 height=34
+src="img/lec4.files/image002.gif">, то согласно критерию Лапласа следует выбрать ту альтернативу, для которой средневзвешенный риск </p>
+<p><img width=101 height=67 src="img/lec4.files/image005.gif"></p>
+ <p>минимален (в предположении равных вероятностей исходов S<sub>j</sub>).</p>
+<p>Пример 4.1</p>
+<p>Одно из предприятий должно определить уровень предложения услуг так, чтобы удовлетворить потребности клиентов в течение предстоящих праздников. Точное число клиентов не известно, но ожидается, что оно может принять одно из четырех значений: 200, 250, 300 или 350 клиентов. Для каждого из этих возможных значений существует наилучший уровень предложения (с точки зрения возможных затрат). Отклонения от этих уровней приводят к дополнительным затратам либо из-за превышения предложения над спросом, либо из-за неполного удовлетворения спроса.</p>
+<p>В таблице 4.1. приведены потери в условных единицах.</p>
+
+<br>
+<h4><b>Таблица 4.1. Данные примера</b></h4>
+
+<table border=1>
+ <tr>
+ <td width=133>
+ <p>Уровень предложения</p>
+ </td>
+ <td width=38>
+ <p align=center>S<sub>1</sub></p>
+ </td>
+ <td width=38>
+ <p align=center>S<sub>2</sub></p>
+ </td>
+ <td width=28>
+ <p align=center>S<sub>3</sub></p>
+ </td>
+ <td width=38>
+ <p align=center>S<sub>4</sub></p>
+ </td>
+ </tr>
+ <tr>
+ <td width=133>
+ <p>A<sub>1</sub></p>
+ </td>
+ <td width=38>
+ <p align=center>5</p>
+ </td>
+ <td>
+ <p align=center>10</p>
+ </td>
+ <td width=28>
+ <p align=center>18</p>
+ </td>
+ <td width=38>
+ <p align=center>25</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=133>
+ <p>A<sub>2</sub></p>
+ </td>
+ <td width=38>
+ <p align=center>8</p>
+ </td>
+ <td>
+ <p align=center>7</p>
+ </td>
+ <td width=28>
+ <p align=center>8</p>
+ </td>
+ <td width=38>
+ <p align=center>23</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=133>
+ <p>A<sub>3</sub></p>
+ </td>
+ <td width=38>
+ <p align=center>21</p>
+ </td>
+ <td>
+ <p align=center>18</p>
+ </td>
+ <td width=28>
+ <p align=center> 12</p>
+ </td>
+ <td width=38>
+ <p align=center>21</p>
+ </td>
+ </tr>
+ <tr>
+ <td width=133>
+ <p>A<sub>4</sub></p>
+ </td>
+ <td width=38>
+ <p align=center>30</p>
+ </td>
+ <td>
+ <p align=center>22</p>
+ </td>
+ <td width=28 >
+ <p align=center>19</p>
+ </td>
+ <td width=38>
+ <p align=center>15</p>
+ </td>
+ </tr>
+</table>
+<br>
+
+<p>где альтернативы A<sub>i</sub>- решение ориентироваться на 200, 250, 300 или 350 клиентов, соответственно. А ситуации S<sub>j</sub> - ситуации, когда количество клиентов окажется 200, 250, 300 или 350 соответственно. По сути значения в таблице - оценки риска. </p>
+<p>Принцип Лапласа предполагает, что S<sub>j</sub> равновероятны.</p>
+<p>Следовательно, вероятности ситуаций  P{S =S<sub>j</sub>} =1/4, j= 1, 2, 3, 4 и ожидаемые потери при различных действиях A<sub>i</sub>  составляют:</p>
+<p>F<sub>1</sub>= (1/4)(5+10+18+25)=14,5</p>
+<p>F<sub>2</sub>= (1/4)(8+7+8+23)=11,5</p>
+<p>F<sub>3</sub>= (1/4)(21+18+12+21)=18,0</p>
+<p>F<sub>4</sub>= (1/4)(30+22+19+15)=21,5</p>
+<p>Таким образом, наилучшим решением  в соответствии с критерием Лапласа будет A<sub>2</sub>­ (выбираем наименьшее значение F<sub>i</sub>), то есть ориентироваться на 250 клиентов.</p>
+ <p></p>
+<a name=2 class="anchor"></a>
+<br>
+<br>
+<h3>4.2. Критерий Вальда и критерий Сэвиджа</h3>
+<p>Данный  критерий  основывается  на  принципе  максимального пессимизма, то есть на предположении, что скорее всего произойдет наиболее худший вариант развития ситуации и риск наихудшего варианта нужно свести к минимуму.  Таким образом, если задана матрица выигрышей A = <img width=115 height=34
+src="img/lec4.files/image001.gif">, то для применения критерия нужно для каждой альтернативы выбрать наихудший  показатель  привлекательности </p>
+<p>a<sub>i</sub>= <img width=92 height=27
+src="img/lec4.files/image006.gif"></p>
+ <p>(наименьшее  число  в  каждой строке  матрицы  выигрышей), а  потом выбрать  ту  альтернативу,  для  которой  этот показатель  максимальный, то есть выбрать элемент в матрице</p>
+<p><img src="img/lec4.files/image007.gif">, </p>
+<p>а соответствующая ему альтернатива признается наилучшей.</p>
+<p>Если же задана матрица рисков R=<img width=111 height=34
+src="img/lec4.files/image002.gif">, то применяется, так называемый, критерий Сэвиджа, который рекомендует выбрать альтернативу  дающую минимальный риск из максимальных по каждому варианту альтернатив. То есть в матрице рисков выбирается элемент </p>
+<p><img width=142 height=35
+src="img/lec4.files/image008.gif">,</p>
+<p>а соответствующая ему альтернатива признается наилучшей.</p>
+ <p></p>
+<p>  Для  Примера 4.1 (задана матрица рисков) имеем:</p>
+<p>r1=<img width=90 height=27
+src="img/lec4.files/image009.gif">=25,</p>
+<p>r2=<img width=90 height=27
+src="img/lec4.files/image009.gif">=23</p>
+<p>r3=<img width=90 height=27
+src="img/lec4.files/image009.gif">=21,</p>
+<p>r4=<img width=90 height=27
+src="img/lec4.files/image009.gif">=30,</p>
+<p><img width=221 height=35
+src="img/lec4.files/image010.gif">.</p>
+<p>Таким образом, наилучшим решением  в соответствии с критерием Сэвиджа будет A<sub>3</sub> , то есть ориентироваться на 300 клиентов.</p>
+ 
+ 
+<a name=3 class="anchor"></a>
+<br>
+<br>
+<h3>4.3. Критерий максимального оптимизма</h3>
+<p>Наиболее простой критерий, основывающийся на идее, что ЛПР, имея возможность  в  некоторой  степени  управлять  ситуацией,  рассчитывает,  то произойдет  такое  развитие  ситуации,  которое  для  него  является  наиболее выгодным.  В  соответствии  с  критерием  принимается  альтернатива, соответствующая  максимальному  элементу  матрицы  выигрышей, то есть в матрице выигрышей выбирается элемент </p>
+<p><img width=149 height=35
+src="img/lec4.files/image011.gif">,</p>
+<p>а соответствующая ему альтернатива признается наилучшей.</p>
+<p>Если же анализируется матрица рисков, то критерий  максимального </p>
+<p>оптимизма    определяет оптимальную  альтернативу,  соответствующую </p>
+<p>минимальному элементу матрицы выигрышей, то есть определяется элемент</p>
+<p><img width=142 height=35
+src="img/lec4.files/image012.gif">,</p>
+<p>а соответствующая ему альтернатива признается наилучшей.</p>
+<p></p>
+<a name=4 class="anchor"></a>
+<br>
+<br>
+<h3>4.4. Критерий Гурвица</h3>
+<p>Это  самый  универсальный  критерий,  который  позволяет  управлять степенью  «оптимизма  -  пессимизма»  ЛПР. Введем некоторый коэффициент  <img src="img/lec4.files/image028.png">, который  назовем  коэффициентом  доверия  или  коэффициентом  оптимизма. </p>
+<p>Этот  коэффициент  можно  интерпретировать  как  вероятность,  с  которой произойдет  наилучший  для  ЛПР  исход.  Исходя  из  этого,  наихудший  вариант можно  ожидать  с  вероятностью  (<img src="img/lec4.files/image027.png">).  Коэффициент  доверия  <img src="img/lec4.files/image028.png">  показывает, насколько  ЛПР  может  управлять  ситуацией  и  в  той  или  иной  степени рассчитывает  на  благоприятный  для  него  исход.  Если  вероятности благоприятной и неблагоприятной ситуации для ЛПР равны, то следует принять <img src="img/lec4.files/image026.png">. </p>
+<p>Для  реализации  критерия  определяются  наилучшие <img src="img/lec4.files/image024.png"> и  наихудшие <img src="img/lec4.files/image025.png">  значение  каждой  альтернативе  по  формулам </p>
+<p> <img src="img/lec4.files/image015.gif">,</p>
+<p><img src="img/lec4.files/image016.gif"></p>
+<p>Далее, вычисляются функции полезности по формуле: </p>
+<p>F<sub>i</sub>=<img width=168 height=26 src="img/lec4.files/image017.gif">.</p>
+<p>И выбирается  та  альтернатива,  для  которой  функция  полезности максимальна.</p>
+<p>Следует  отметить,  что  при  <img src="img/lec4.files/image021.png">,  критерий  Гурвица  переходит  в пессимистический  критерий  Вальда,  а  при  <img src="img/lec4.files/image022.png">  –  в  критерий  максимального оптимизма.</p>
+<p>Для  реализации критерия  Гурвица в случае заданной матрицы рисков также вычисляются максимальные и минимальные показатели для каждой  альтернативы <img src="img/lec4.files/image024.png"> и  <img src="img/lec4.files/image025.png">  . После чего полезность вычисляют по фомуле :</p>
+<p><img src="img/lec4.files/image023.png"></p>
+<p> И выбирается альтернатива с наименьшей функцией полезности.</p>
+
+
+<a name=q class="anchor"></a>
+<h3>Контрольные вопросы</h3>
+<ol type=1>
+<li> Приведите пример принятия решения в условиях неопределенности. Опишите множество альтернатив ЛПР  и матрицу выигрышей.</li>
+<li> Приведите пример принятия решений, когда ситуация описывается матрицей риска.</li>
+<li> Возможно ли при принятии решений ситуацию неопределенности перевести в ситуацию риска? Если это возможно, то какие методы могут помочь ?</li>
+<li> В чем суть критериев принятия решений в условиях неопределенности?  </li>
+<li> В чем отличие в применении критериев принятия решений в условиях неопределенности при задании матрицы выигрышей и при задании матрицы рисков?</li>
+</ol>
+
+
+
+<br><br>
+<!--конец-->
+      
+				
+
+				</div>
+			</div>
+			
+      </div>
+    </div>
+  </div>
+	
+	<!--Меню навигации по Темам -->	
+	<div aria-label="..." class = "nav-menu">
+	 <ul class="pager background-transition-slow">
+		 <li title="Наверх" style = "margin-right:15px;	"><a class = "glyphicon glyphicon-menu-up page-scroll" href="#page-top"></a></li>
+		 <li title="К предыдущей лекции"><a class = "glyphicon glyphicon-menu-left page-scroll" href="lec3.htm"></a></li>
+		 <li title="В содержание"><a class = "glyphicon glyphicon-list-alt" href="lec_index.htm"></a></li>
+		 <li title="К следующей лекции"><a class = "glyphicon glyphicon-menu-right page-scroll" href="lec5.htm"></a></li>
+	 </ul>
+	</div>
+	<!---->
+	
+	</div>
+  <!-- jQuery -->
+  <script src="../lib/js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../lib/js/bootstrap.min.js"></script>
+
+  <!-- Scrolling Nav JavaScript -->
+  <script src="../lib/js/jquery.easing.min.js"></script>
+  <script src="../lib/js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
